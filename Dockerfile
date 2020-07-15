@@ -40,13 +40,13 @@ RUN ${PIP} install tensorflow==2.2.0
 # Download and install library
 RUN R -e "install.packages(c('shinydashboard', 'shinyWidgets', 'shinyjs', 'RColorBrewer', 'cowplot', 'viridis'))"
 RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
-RUN R -e "devtools::install_github('hdsu-bioquant/ButcheR')"
+RUN R -e "devtools::install_github('hdsu-bioquant/ButcheR' )"
 
 
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/
 RUN git clone https://github.com/hdsu-bioquant/ShinyButcheR.git
-RUN mv ShinyButcheR /srv/shiny-server
+RUN mv ShinyButcheR/* /srv/shiny-server/
 COPY .localtf /srv/shiny-server/
 
 RUN chmod -R 755 /srv/shiny-server/
