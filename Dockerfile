@@ -37,7 +37,7 @@ RUN ${PIP} install tensorflow==2.2.0
 
 
 # Download and install library
-RUN R -e "install.packages(c('shinydashboard', 'shinyWidgets', 'shinyjs', 'RColorBrewer', 'cowplot', , 'viridis'))"
+RUN R -e "install.packages(c('shinydashboard', 'shinyWidgets', 'shinyjs', 'RColorBrewer', 'cowplot', 'viridis'))"
 RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
 RUN R -e "devtools::install_github('hdsu-bioquant/ButcheR')"
 
