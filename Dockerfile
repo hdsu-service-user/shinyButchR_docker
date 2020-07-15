@@ -21,7 +21,8 @@ ENV LANG C.UTF-8
 RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libbz2-dev \
-    liblzma-dev
+    liblzma-dev \
+    git
 
 RUN apt-get update && apt-get install -y \
     ${PYTHON} \
@@ -44,9 +45,9 @@ RUN R -e "devtools::install_github('hdsu-bioquant/ButcheR')"
 
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/
-#COPY mapmycorona/ /srv/shiny-server/
 RUN git clone https://github.com/hdsu-bioquant/ShinyButcheR.git
 RUN mv ShinyButcheR /srv/shiny-server
+COPY .localtf /srv/shiny-server/
 
 RUN chmod -R 755 /srv/shiny-server/
 
