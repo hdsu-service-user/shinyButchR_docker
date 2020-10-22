@@ -1,4 +1,4 @@
-<img src="https://github.com/hdsu-bioquant/ShinyButchR/raw/master/https://github.com/hdsu-bioquant/ShinyButchR/raw/master/figs/ShinyButchR_figs/shinyButchR_logo.png" width="300">
+<img src="https://github.com/hdsu-bioquant/ShinyButchR/raw/master/figs/ShinyButchR_figs/shinyButchR_logo.png" width="300">
 
 # ShinyButcherR Docker container
 
