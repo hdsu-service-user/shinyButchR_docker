@@ -41,7 +41,7 @@ RUN ${PIP} install tensorflow==2.2.0
 RUN R -e "install.packages(c('shinydashboard', 'shinyWidgets', 'shinyjs', 'RColorBrewer', 'cowplot', 'viridis'))"
 RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
 RUN R -e "devtools::install_github('hdsu-bioquant/ButchR')"
-
+RUN R -e "devtools::install_github('JohnCoene/waiter')"
 
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/

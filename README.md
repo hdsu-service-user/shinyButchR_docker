@@ -2,8 +2,12 @@
 
 # ShinyButcherR Docker container
 
-To run the ShinyButcherR Docker image use the following command:
+To run the ShinyButcherR Docker image use the following command:  
+
 `docker run --rm  -p 3838:3838 hdsu/shinybutchr`
+
+And lauch the app in browser:
+http://localhost:3838/
 
 # ShinyButchR 
 
