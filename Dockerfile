@@ -42,11 +42,11 @@ RUN R -e "install.packages(c('shinydashboard', 'shinyWidgets', 'shinyjs', 'RColo
 RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
 RUN R -e "devtools::install_github('hdsu-bioquant/ButchR')"
 RUN R -e "devtools::install_github('JohnCoene/waiter')"
-RUN R -e "install.packages('umap')"
+RUN R -e "install.packages('umap' )"
 
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/
-RUN git clone https://github.com/hdsu-bioquant/ShinyButchR.git 
+RUN git clone https://github.com/hdsu-bioquant/ShinyButchR.git
 RUN mv ShinyButchR/* /srv/shiny-server/
 COPY .localtf /srv/shiny-server/
 
