@@ -46,7 +46,7 @@ RUN R -e "install.packages('umap')"
 
 
 # copy the app to the image COPY shinyapps /srv/shiny-server/
-RUN git clone https://github.com/hdsu-bioquant/ShinyButchR.git
+RUN git clone https://github.com/hdsu-bioquant/ShinyButchR.git 
 RUN mv ShinyButchR/* /srv/shiny-server/
 COPY .localtf /srv/shiny-server/
 
